@@ -1,1 +1,1 @@
-# golang-server-starter
+# Go HTTP server boilerplate
