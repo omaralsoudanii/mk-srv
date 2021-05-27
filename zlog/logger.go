@@ -1,7 +1,7 @@
 package zlog
 
 import (
-	"http-srv/v1/config"
+	"github.com/omaralsoudanii/http-srv/config"
 )
 
 func NewLoggerInstance(lc *config.Log) *Logger {

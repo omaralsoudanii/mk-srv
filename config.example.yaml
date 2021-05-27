@@ -1,0 +1,41 @@
+server:
+  address: 0.0.0.0:8080
+  host: http://api.httpsrv.local
+  read_timeout: 10
+  write_timeout: 10
+  idle_timeout: 2
+  context_timeout: 5
+  max_context_timeout: 8
+  cors:
+    origins:
+      - http://www.httpsrv-client.local
+      - http://localhost:3000
+    debug: false
+    maxage: 86400
+    methods:
+      - GET
+      - OPTIONS
+      - POST
+      - DELETE
+      - PUT
+      - HEAD
+    headers:
+      - Content-Type
+      - Content-Length
+      - Accept
+      - Accept-Encoding
+      - Authorization
+      - Accept-Language
+      - X-Requested-With
+    credentials: false # PREVENTS COOKIES FROM GETTING SENT
+
+logger:
+  console:
+    enabled: true
+    json: false
+    level: debug
+  file:
+    enabled: true
+    json: true
+    level: debug
+    location: /var/log/http-srv

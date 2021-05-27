@@ -1,9 +1,10 @@
 package main
 
 import (
-	"http-srv/v1/zlog"
 	"os"
 	"time"
+
+	"github.com/omaralsoudanii/http-srv/zlog"
 )
 
 func main() {

@@ -26,5 +26,4 @@ local.yaml
 *.env
 
 # Excutable file
-/go-server
-go-server.iml
+http-srv.iml
