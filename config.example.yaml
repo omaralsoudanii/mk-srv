@@ -38,4 +38,4 @@ logger:
     enabled: true
     json: true
     level: debug
-    location: /var/log/http-srv
+    location: /var/log/mk-srv

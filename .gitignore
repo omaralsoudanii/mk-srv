@@ -26,4 +26,4 @@ local.yaml
 *.env
 
 # Excutable file
-http-srv.iml
+mk-srv.iml

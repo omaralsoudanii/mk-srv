@@ -1,4 +1,4 @@
-module github.com/omaralsoudanii/http-srv
+module github.com/omaralsoudanii/mk-srv
 
 go 1.16
 

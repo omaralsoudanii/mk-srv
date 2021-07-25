@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/omaralsoudanii/http-srv/zlog"
+	"github.com/omaralsoudanii/mk-srv/zlog"
 )
 
 func main() {

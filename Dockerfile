@@ -16,7 +16,7 @@ COPY . /go/src/app
 # Build the binary
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
       -ldflags='-w -s' \
-        -o /go/bin/http-srv http-srv/v1/cmd/http-srv
+        -o /go/bin/mk-srv github.com/omaralsoudanii/mk-srv/cmd/mk-srv
 
 ############################
 # STEP 2 build distroless image
@@ -24,7 +24,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
 FROM gcr.io/distroless/static
 
 # copy the binary , and config file (due to pathing problem when loading the config)
-COPY --from=build /go/bin/http-srv ./
+COPY --from=build /go/bin/mk-srv ./
 COPY --from=build /go/src/app/config.yaml ./
 # Run the server binary.
-CMD ["./http-srv"]
+CMD ["./mk-srv"]
